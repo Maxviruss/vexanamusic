@@ -27,13 +27,6 @@ async def _(bot: Client, cmd: Message):
     await handle_user_status(bot, cmd)
 
 
-@Client.on_message(filters.text & ~filters.private)
-async def delcmd(_, message: Message):
-    if await delcmd_is_on(message.chat.id) and message.text.startswith("/") or message.text.startswith("!") or message.text.startswith("."):
-       await message.delete()
-    await message.continue_propagation()
-
-
 @Client.on_message(command(["reload", f"reload@{BOT_USERNAME}"]))
 @authorized_users_only
 async def update_admin(client, message):
