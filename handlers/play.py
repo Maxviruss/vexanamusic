@@ -528,8 +528,8 @@ async def play(_, message: Message):
                 except Exception:
                     # print(e)
                     await lel.edit(
-                        f"<b>⛑ Flood Wait Error ⛑\nAssistant tidak dapat bergabung dengan grup Anda karena banyaknya permintaan bergabung untuk userbot! Pastikan pengguna tidak dibanned dalam grup."
-                        f"\n\nAtau tambahkan @{ASSISTANT_NAME} secara manual ke Grup Anda dan coba lagi</b>",
+                        f"<b>⛑ Flood Wait Error \nAssistant can't join your group due to many join requests for userbot! Make sure the user is not banned in the group."
+                         f"\n\nOr manually add @{ASSISTANT_NAME} to your Group and try again</b>",
                     )
     try:
         await USER.get_chat(chid)
@@ -587,7 +587,7 @@ async def play(_, message: Message):
         )
         file_name = get_file_name(audio)
         title = file_name
-        thumb_name = "https://telegra.ph/file/f6086f8909fbfeb0844f2.png"
+        thumb_name = "https://telegra.ph/file/c2da18c0bd66f3631c8f4.png"
         thumbnail = thumb_name
         ctitle = message.chat.title
         ctitle = await CHAT_TITLE(ctitle)
@@ -655,7 +655,6 @@ async def play(_, message: Message):
             while j < 5:
                 toxxt += f"{emojilist[j]} [{results[j]['title'][:27]}...](https://youtube.com{results[j]['url_suffix']})\n"
                 toxxt += f" ├ 💡 Duration - {results[j]['duration']}\n"
-                toxxt += f" └ ⚡ __Powered by {BOT_NAME} AI__\n\n"
                 j += 1            
             keyboard = InlineKeyboardMarkup(
                 [
@@ -915,8 +914,8 @@ async def ytplay(_, message: Message):
                 except Exception:
                     # print(e)
                     await lel.edit(
-                        f"<b>Flood Wait Error\n{user.first_name} tidak dapat bergabung dengan grup Anda karena banyaknya permintaan bergabung untuk userbot! Pastikan pengguna tidak dibanned dalam grup."
-                        f"\n\nAtau tambahkan @{ASSISTANT_NAME} secara manual ke Grup Anda dan coba lagi</b>",
+                        f"<b>Flood Wait Error \nAssistant can't join your group due to many join requests for userbot! Make sure the user is not banned in the group."
+                         f"\n\nOr manually add @{ASSISTANT_NAME} to your Group and try again</b>",
                     )
     try:
         await USER.get_chat(chid)
