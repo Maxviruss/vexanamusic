@@ -64,7 +64,7 @@ async def stream(_, message: Message):
     if message.chat.id in callsmusic.pytgcalls.active_calls:
         position = await queues.put(message.chat.id, file=file_path)
         await message.reply_photo(
-            photo="https://telegra.ph/file/36343b9d4742efe0b09cd.jpg",
+            photo="https://telegra.ph/file/c2da18c0bd66f3631c8f4.png",
             caption=f"🏷 **Name:** [{title[:40]}](https://t.me/{GROUP_SUPPORT})\n⏱ **Duration:** `{duration}`\n🎧 **Request by:** {costumer}\n\n🔢 Track position »** `{position}`",
             reply_markup=keyboard,
         )
@@ -72,7 +72,7 @@ async def stream(_, message: Message):
     else:
         callsmusic.pytgcalls.join_group_call(message.chat.id, file_path)
         await message.reply_photo(
-            photo="https://telegra.ph/file/224178328de996a82507f.jpg",
+            photo="https://telegra.ph/file/c2da18c0bd66f3631c8f4.png",
             caption=f"🏷 **Name:** [{title[:40]}](https://t.me/{GROUP_SUPPORT})\n⏱ **Duration:** `{duration}`\n💡 **Status:** `Playing`\n" \
                    +f"🎧 **Request by:** {costumer}",
             reply_markup=keyboard,
