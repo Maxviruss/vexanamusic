@@ -665,8 +665,7 @@ async def play(_, message: Message):
                    InlineKeyboardButton("🗑️ Close", callback_data="closed"),
                 ],
             ]
-        )
-        )
+            )
             chat_name = message.chat.title
             requested_by = message.from_user.first_name
             await generate_cover(chat_name, title, thumbnail)
