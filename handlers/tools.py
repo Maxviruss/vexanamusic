@@ -86,7 +86,7 @@ async def telegraph(client, message):
 # ====== SHOWID ======
 
 
-@Client.on_message(command(["id", f"id@{BOT_USERNAME}"]))
+@Client.on_message(command(["idd", f"id@{BOT_USERNAME}"]))
 async def showid(client, message):
     chat_type = message.chat.type
 
@@ -235,7 +235,7 @@ async def edit_or_reply(message, text, parse_mode="md"):
     return await message.edit(text, parse_mode=parse_mode)
 
 
-@Client.on_message(command(["shazam", f"shazam@{BOT_USERNAME}"]))
+@Client.on_message(command(["shazamm", f"shazam@{BOT_USERNAME}"]))
 async def shazamm(client, message):
     kek = await edit_or_reply(message, "`Shazaming In Progress!`")
     if not message.reply_to_message:
@@ -353,7 +353,7 @@ async def carbon_func(client, message):
 # ====== GITHUB ======
 
 
-@Client.on_message(command("github"))
+@Client.on_message(command("githubb"))
 def git(_,message):
     user = message.text.split(' ')[1]
     res = get(f'https://api.github.com/users/{user}').json()
