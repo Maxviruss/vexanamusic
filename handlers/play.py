@@ -29,9 +29,8 @@ from PIL import Image, ImageFont, ImageDraw
 
 
 chat_id = None
-arq = ARQ("https://thearq.tech", ARQ_API_KEY, aiohttpsession)
-DISABLED_GROUPS = []
 useer ="NaN"
+DISABLED_GROUPS = []
 
 def cb_admin_check(func: Callable) -> Callable:
     async def decorator(client, cb):
