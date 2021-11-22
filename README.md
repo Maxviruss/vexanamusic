@@ -1,6 +1,6 @@
-<p align="center"><a href="https://t.me/emikosupport"><img src="https://telegra.ph/file/2b6036786291fdc0f884f.png" width="340"></a></p>
+<p align="center"><a href="https://t.me/emikosupport"><img src="https://telegra.ph/file/4a7d5037bcdd1e74a517a.jpg" width="340"></a></p>
 
-<p align="center"><b> KennedyXMusic is a Music bot for playing music on telegram voice chat group with extra features </b></p>
+<p align="center"><b> VexanaMusic is a Music bot for playing music on telegram voice chat group with extra features </b></p>
 
 <h3>Requirements</h3>
 
@@ -73,8 +73,8 @@ The easy way to host this bot, deploy to Heroku
 - curl -sL https://deb.nodesource.com/setup_16.x | bash -
 - sudo apt-get install -y nodejs
 - npm i -g npm
-- git clone https://github.com/KennedyProject/KennedyXMusic # Clone your repo.
-- cd KennedyXMusic
+- git clone https://github.com/aksr-aashish/vexanaMusic # Clone your repo.
+- cd vexanamusic
 - pip3 install -U -r requirements.txt
 - cp example.env .env #Use vim to edit ENV
 - vim .env #Fill up your ENVs ( Steps press i to enter in insert mode then edit the file. Press Esc to exit the editing mode then type :wq! and press Enter key to save the file.)
