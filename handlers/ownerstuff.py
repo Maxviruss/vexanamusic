@@ -361,9 +361,7 @@ async def delvar(client: Client, message: Message, app_):
 # Usage Heroku Dyno
 
 
-heroku_client = None
-if HEROKU_API_KEY:
-    heroku_client = heroku3.from_key(HEROKU_API_KEY)
+heroku_client = heroku3.from_key(HEROKU_API_KEY) if HEROKU_API_KEY else None
     
 def _check_heroku(func):
     @wraps(func)
@@ -498,10 +496,11 @@ async def executor(client, message):
         )
         await message.reply_document(
             document=filename,
-            caption=f"**INPUT:**\n`{cmd[0:980]}`\n\n**OUTPUT:**\n`Attached Document`",
+            caption=f'**INPUT:**\n`{cmd[:980]}`\n\n**OUTPUT:**\n`Attached Document`',
             quote=False,
             reply_markup=keyboard,
         )
+
         await message.delete()
         os.remove(filename)
     else:

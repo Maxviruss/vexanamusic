@@ -20,6 +20,7 @@ SOFTWARE.
 """
 
 
+
 from time import time
 from datetime import datetime
 from pyrogram import Client, filters
@@ -34,10 +35,10 @@ START_TIME = datetime.utcnow()
 START_TIME_ISO = START_TIME.replace(microsecond=0).isoformat()
 TIME_DURATION_UNITS = (
     ('week', 60 * 60 * 24 * 7),
-    ('day', 60 * 60 * 24),
-    ('hour', 60 * 60),
+    ('day', 60 ** 2 * 24),
+    ('hour', 60 ** 2),
     ('min', 60),
-    ('sec', 1)
+    ('sec', 1),
 )
 
 async def _human_time_duration(seconds):
@@ -355,17 +356,21 @@ async def cbhplay(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbplayback"))
 async def cbplayback(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""**😕 Hey !! Give me something to play and searching on youtube.**""", 
+        '**😕 Hey !! Give me something to play and searching on youtube.**',
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                   InlineKeyboardButton("Group Support", url=f"https://t.me/{GROUP_SUPPORT}"),
+                    InlineKeyboardButton(
+                        "Group Support", url=f"https://t.me/{GROUP_SUPPORT}"
+                    ),
                 ],
                 [
-                   InlineKeyboardButton("See Command", callback_data="cbhplay"),
+                    InlineKeyboardButton(
+                        "See Command", callback_data="cbhplay"
+                    ),
                 ],
                 [
-                   InlineKeyboardButton("🗑️ Close", callback_data="closed"),
+                    InlineKeyboardButton("🗑️ Close", callback_data="closed"),
                 ],
             ]
         ),

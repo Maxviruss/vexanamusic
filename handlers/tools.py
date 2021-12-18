@@ -109,22 +109,17 @@ async def showid(client, message):
                 f"<code>{message.reply_to_message.from_user.id}</code>\n"
             )
             file_info = get_file_id(message.reply_to_message)
-            if file_info:
-                _id += (
-                    f"<b>{file_info.message_type}</b>: "
-                    f"<code>{file_info.file_id}</code>\n"
-                )
         else:
             _id += (
                 "<b>User ID</b>: "
                 f"<code>{message.from_user.id}</code>\n"
             )
             file_info = get_file_id(message)
-            if file_info:
-                _id += (
-                    f"<b>{file_info.message_type}</b>: "
-                    f"<code>{file_info.file_id}</code>\n"
-                )
+        if file_info:
+            _id += (
+                f"<b>{file_info.message_type}</b>: "
+                f"<code>{file_info.file_id}</code>\n"
+            )
         await message.reply_text(_id, quote=True)
 
 
@@ -284,11 +279,7 @@ async def jsonify(_, message):
     the_real_message = None
     reply_to_id = None
 
-    if message.reply_to_message:
-        the_real_message = message.reply_to_message
-    else:
-        the_real_message = message
-
+    the_real_message = message.reply_to_message or message
     try:
         await message.reply_text(f"<code>{the_real_message}</code>")
     except Exception as e:
