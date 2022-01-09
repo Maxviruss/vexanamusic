@@ -17,7 +17,7 @@ async def pmPermit(client: USER, message: Message):
             chat_id = message.chat.id
             if chat_id in pchats:
                 return
-            await USER.send_message(message.chat.id, f"**Hello I'm the assistant of [{BOT_NAME}](https://t me/{BOT_USERNAME}).**\n\n🔴 Note:\n\n༄ Don't spam so bots don't lag.\n༄ Don't post anything  private ones\n༄ Please send your group link here so I can join\n\n⨀ Updates : @{UPDATES_CHANNEL} \n⨀ Support : @{GROUP_SUPPORT}\n👩‍💻 Dev : @Itzz_axel1 \n⨀ Chatting Hub : @FlirtingZones\n\n")
+            await USER.send_message(message.chat.id, f"**Hello I'm the assistant of [{BOT_NAME}](https://t me/{BOT_USERNAME}).**\n\n🔴 Note:\n\n༄ Don't spam so bots don't lag.\n༄ Don't post anything  private ones\n༄ Please send your group link here so I can join\n\n⨀ Updates : @{UPDATES_CHANNEL} \n⨀ Support : @{GROUP_SUPPORT}\n👩‍💻 Dev : @Itzz_axel1 \n⨀ Chatting Hub : @FeelingZones\n\n")
             return
 
     
